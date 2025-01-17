@@ -10,7 +10,6 @@ body{
 }
 
 .navbar{
-    align-items: center;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -27,9 +26,14 @@ nav .logo{
 
 nav .logo img{
     margin-left: 150px;
-    width: 150px;
+    max-width: 130px;
+    height: auto;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+nav .logo i{
+    display: none;
 }
 
 nav .nav-links{
@@ -405,7 +409,6 @@ form button{
 .footer-contact div img{
     width: 40px;
     height: 30px;
-    align-items: start;
 }
 
 .footer-contact div p{
@@ -477,4 +480,171 @@ ul li a{
     width: 100%;
     top: 50px;
     color: rgb(16, 16, 70);
+}
+
+@media only screen and (max-width: 800px){
+    
+    nav{
+        display: block;
+        /* justify-content: space-between;
+        align-items: center; */
+    }
+    
+    nav .logo{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 50px;
+    }
+
+    nav .logo img{
+        margin: 0;
+        width: 100px;
+        height: 60px;
+        margin-top: 15px;
+        margin-left: 10px;
+    }
+
+    nav .logo i{
+        display: block;
+        margin-right: 20px;
+        margin-top: 30px;
+        cursor: pointer;
+    }
+
+    
+    
+    
+    nav .nav-links{
+        width: 100%;
+        text-align: center;
+    }
+    
+    nav ul{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        padding: 10px;
+    }
+    
+    nav ul li{
+        list-style: none;
+        margin-right: 10px;
+    }
+    
+    nav ul li a, select{
+        text-decoration: none;
+        color: #333;
+        font-size: 15px;
+        font-weight: 540;
+        border: none;
+    }
+
+    .main h4,.main h1,.main p,.main button{
+        left: 70px;
+    }
+
+    .main p{
+        top: 450px;
+        font-size: 33px;
+    }
+
+    .main button{
+        top: 540px;
+        font-size: 15px;
+    }
+
+    .arrow{
+        height: 35px;
+        width: 35px;
+    }
+
+    .about{
+        display: block;
+        position: relative;
+    }
+
+    .about-image{
+        width: 100%;
+        position: absolute;
+        display: none;
+    }
+
+    .about-text{
+        width: 100%;
+        padding: 20px;
+    }
+
+    .images{
+        grid-template-columns: repeat(1,1fr);
+        padding: 10px;
+        gap: 20px;
+    }
+
+    .i{
+        width: 100%;
+    }
+
+    .client h1{
+        font-size: 50px
+    }
+
+    .logos{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .mail-box{
+        width: 80%;
+        height: 60px;
+    }
+
+    form button{
+        font-size: 17px;
+    }
+
+    .footer{
+        height: auto;
+    }
+
+    .footer-content{
+        width: 100%;
+        display: block;
+        /* display: grid;
+        grid-template-columns: repeat(2,1fr); */
+        text-align: center;
+        padding: 0;
+    }
+
+    .quick-links{
+        width: 100%;
+    }
+    
+    .footer-services{
+        width: 100%;
+    }
+    .footer-contact{
+        width: 100%;
+    }
+
+    .footer-contact div{
+        justify-content: center;
+    }
+
+    .footer-contact div img{
+        
+        align-items: right;
+    }
+
+    .follow{
+        width: 100%;
+    }
+    
+    .line-div{
+        top: 790px;
+    }
+
+    .copyright{
+        top: 13px;
+        font-size: 12px;
+    }
 }
